@@ -11,14 +11,16 @@
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
+#include "Configure.hpp"
 
 #define MainWindow AfxGetMainWnd()->m_hWnd
 
 // CTouhoProjectDemo13AlphaApp
 
 BEGIN_MESSAGE_MAP(CTouhoProjectDemo13AlphaApp, CWinApp)
-	ON_WM_PAINT()
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
+	ON_WM_PAINT()
+	ON_WM_CLOSE()
 END_MESSAGE_MAP()
 
 
@@ -38,6 +40,10 @@ void CTouhoProjectDemo13AlphaApp::OnPaint()
 	ShowWindow(MainWindow, SW_HIDE);
 	ChooseWindow choosewindow;
 	choosewindow.ShowWindow(SW_SHOW);
+}
+
+void CTouhoProjectDemo13AlphaApp::OnClose()
+{
 }
 
 

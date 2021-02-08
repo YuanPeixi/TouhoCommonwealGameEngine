@@ -19,7 +19,14 @@ public:
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
+	afx_msg void OnPaint();
+
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnCbnSelchangeCombo1();
+	CStatic BackgroundPicCtl;
+	CStatic ChooseWndBackground;
+	CStatic ChooseWndForground;
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+	CStatic GameTitle;
 };

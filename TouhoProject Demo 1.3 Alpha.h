@@ -22,6 +22,7 @@ public:
 	
 protected:
 	afx_msg void OnPaint();
+	afx_msg void OnClose();
 
 // 重写
 public:
